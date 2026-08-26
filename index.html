@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="theme-color" content="#ff5c8a">
+  <meta name="description" content="Uma pequena surpresa feita especialmente para Belly.">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Belly-Stars ⭐💗</title>
+</head>
+
+<body>
+
+  <!-- Fundo -->
+  <div class="background">
+    <span>♡</span>
+    <span>✦</span>
+    <span>♡</span>
+    <span>✧</span>
+    <span>♡</span>
+    <span>✦</span>
+  </div>
+
+  <!-- APP -->
+  <main id="app">
+
+    <!-- TELA DE ENTRADA -->
+    <section id="home" class="screen active">
+
+      <div class="stars">✦ ✧ ✦</div>
+
+      <p class="small-title">UMA SURPRESA PARA VOCÊ</p>
+
+      <h1>
+        Belly
+        <span>💗</span>
+      </h1>
+
+      <p class="intro">
+        Eu poderia simplesmente te mandar uma mensagem...
+        <br>
+        mas achei que você merecia algo diferente.
+      </p>
+
+      <button class="primary-btn" onclick="showScreen('menu')">
+        Abrir minha surpresa 💌
+      </button>
+
+      <p class="secret">
+        feito com carinho, só para você
+      </p>
+
+    </section>
+
+
+    <!-- MENU PRINCIPAL -->
+    <section id="menu" class="screen">
+
+      <div class="top">
+        <span class="logo">B♡</span>
+        <span class="online">● feito para Belly</span>
+      </div>
+
+      <h2>Escolha uma surpresa 💗</h2>
+
+      <p class="subtitle">
+        Cada botão guarda um pedacinho do que eu queria te dizer.
+      </p>
+
+      <div class="cards">
+
+        <button class="card" onclick="showScreen('motivos')">
+          <div class="card-icon">💖</div>
+          <div>
+            <strong>30 motivos</strong>
+            <small>por que você é especial</small>
+          </div>
+          <span>›</span>
+        </button>
+
+        <button class="card" onclick="showScreen('carta')">
+          <div class="card-icon">💌</div>
+          <div>
+            <strong>Uma carta</strong>
+            <small>algumas coisas que queria dizer</small>
+          </div>
+          <span>›</span>
+        </button>
+
+        <button class="card" onclick="surprise()">
+          <div class="card-icon">🎁</div>
+          <div>
+            <strong>Não clique aqui</strong>
+            <small>sério... melhor não 😂</small>
+          </div>
+          <span>›</span>
+        </button>
+
+        <button class="card" onclick="showScreen('distancia')">
+          <div class="card-icon">🌙</div>
+          <div>
+            <strong>Mesmo de longe</strong>
+            <small>porque distância não apaga carinho</small>
+          </div>
+          <span>›</span>
+        </button>
+
+      </div>
+
+      <button class="music-btn" onclick="toggleMusic()">
+        🎵 Música
+      </button>
+
+    </section>
+
+
+    <!-- MOTIVOS -->
+    <section id="motivos" class="screen">
+
+      <button class="back" onclick="showScreen('menu')">
+        ← voltar
+      </button>
+
+      <div class="section-icon">💗</div>
+
+      <h2>30 motivos</h2>
+
+      <p class="subtitle">
+        E olha que eu poderia fazer uma lista muito maior...
+      </p>
+
+      <div id="reasons" class="reasons"></div>
+
+    </section>
+
+
+    <!-- CARTA -->
+    <section id="carta" class="screen">
+
+      <button class="back" onclick="showScreen('menu')">
+        ← voltar
+      </button>
+
+      <div class="letter">
+
+        <div class="letter-top">💌</div>
+
+        <h2>Para Belly</h2>
+
+        <p>
+          Eu não sei exatamente em que momento você
+          se tornou alguém tão especial para mim.
+        </p>
+
+        <p>
+          Só sei que, de alguma forma, conversar com você,
+          pensar em você e ter você na minha vida deixou
+          meus dias um pouquinho melhores.
+        </p>
+
+        <p>
+          Talvez eu não fale isso todas as vezes que deveria,
+          mas você é importante para mim.
+        </p>
+
+        <p>
+          E mesmo quando estamos longe, existe uma parte
+          minha que sempre encontra um jeito de estar perto.
+        </p>
+
+        <p>
+          Então fiz essa pequena surpresa para você.
+          Não é perfeita, mas é sincera.
+        </p>
+
+        <p class="signature">
+          Com carinho,<br>
+          alguém que gosta muito de você. ❤️
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- DISTÂNCIA -->
+    <section id="distancia" class="screen">
+
+      <button class="back" onclick="showScreen('menu')">
+        ← voltar
+      </button>
+
+      <div class="moon">🌙</div>
+
+      <h2>Mesmo de longe...</h2>
+
+      <div class="distance-card">
+
+        <p>
+          É meio injusto que você more longe.
+        </p>
+
+        <p>
+          Porque se dependesse de mim,
+          algumas conversas terminariam com um abraço
+          e não com um "boa noite" pela tela.
+        </p>
+
+        <p>
+          Mas até lá...
+        </p>
+
+        <h3>
+          eu vou continuar encontrando maneiras
+          de ficar pertinho. 💗
+        </h3>
+
+      </div>
+
+    </section>
+
+
+    <!-- SURPRESA -->
+    <section id="surprise" class="screen">
+
+      <div class="surprise-box">
+        <div class="big-heart">❤️</div>
+
+        <h2>EU AVISEI 😂</h2>
+
+        <p>
+          Você realmente clicou no botão
+          que dizia para não clicar.
+        </p>
+
+        <p>
+          Mas tudo bem...
+        </p>
+
+        <h3>
+          era só uma desculpa para te dizer<br>
+          que eu gosto de você. 🥰
+        </h3>
+
+        <button class="primary-btn" onclick="showScreen('menu')">
+          Tá bom, voltar 😌
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ÁUDIO OPCIONAL -->
+  <!--
+    Quando quiser colocar uma música autorizada,
+    podemos adicionar o arquivo aqui.
+  -->
+  <audio id="music" loop>
+    <source src="" type="audio/mpeg">
+  </audio>
+
+
+  <script src="script.js"></script>
+
+</body>
+        </html>
